@@ -1,3 +1,5 @@
+clear
+
 #temp file for grep output check
 TFile=$HOME/i3-Setup/.temp.txt
 #path to error output file
@@ -42,16 +44,12 @@ sudo chmod +x artix.AppImage
 
 cd $HOME
 
-echo "2.1: configuring urxvt" | tee -a $ERFile
-cp -r i3-Setup/.Xresources
-xrdb $HOME/.Xresources
-
 #echo "2.6: configuring vim plugins" | tee -a $ERFile
 #curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 #    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim >> $ERFile 2>&1
 #cp -r i3-Setup/.vimrc $HOME
 
-echo "2.2: configuring wallpaper"
+echo "2.0: configuring wallpaper"
 mkdir $HOME/Pictures/Wallpapers
 cd $HOME/i3-Setup
 
