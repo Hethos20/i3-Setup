@@ -35,6 +35,7 @@ sudo apt-get install pcmanfm -yy >> $ERFile 2>&1
 
 echo "1.4: installing urxvt" | tee -a $ERFile
 sudo apt-get install rxvt-unicode -yy >> $ERFile 2>&1
+xrdb $HOME/.Xresources
 
 echo "1.5: installing compton" | tee -a $ERFile
 sudo apt-get install compton -yy >> $ERFile 2>&1
