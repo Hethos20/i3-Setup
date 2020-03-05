@@ -6,7 +6,7 @@ ERFile=$HOME/i3-Setup/Error2.txt
 cd $HOME
 mkdir Documents Downloads Desktop Music Pictures Public Videos .programs .games .scripts .config
 cp -ar $HOME/i3-Setup/home/.config/* $HOME/.config
-cp -a $HOME/i3-Setup/home/{.bashrc,.profile,.vimrc,.Xresources}
+cp -a $HOME/i3-Setup/home/{.bashrc,.profile,.vimrc,.Xresources} $HOME
 
 echo "1.1: installing i3 blocks" | tee -a $ERFile
 cd $HOME/.programs
@@ -41,21 +41,7 @@ sudo chmod +x artix.AppImage
 
 cd $HOME
 
-echo "2.1: configuring .bashrc" | tee -a $ERFile
-rm .bashrc
-cp i3-Setup/.bashrc .
-
-echo "2.2: configuring .profiles" | tee -a $ERFile
-rm .profile
-cp i3-Setup/.profile .
-
-echo "2.3: moving custom scripts to home directory" | tee -a $ERFile
-cp -r i3-Setup/.scripts .
-
-echo "2.4: copying the .config directory" | tee -a $ERFile
-cp -r i3-Setup/.config .
-
-echo "2.5: configuring urxvt" | tee -a $ERFile
+echo "2.1: configuring urxvt" | tee -a $ERFile
 cp -r i3-Setup/.Xresources
 xrdb $HOME/.Xresources
 
@@ -64,7 +50,7 @@ xrdb $HOME/.Xresources
 #    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim >> $ERFile 2>&1
 #cp -r i3-Setup/.vimrc $HOME
 
-echo "2.7: configuring wallpaper"
+echo "2.2: configuring wallpaper"
 mkdir $HOME/Pictures/Wallpapers
 cd $HOME/i3-Setup
 
