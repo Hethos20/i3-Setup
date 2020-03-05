@@ -6,6 +6,7 @@ ERFile=$HOME/i3-Setup/Error2.txt
 cd $HOME
 mkdir Documents Downloads Desktop Music Pictures Public Videos .programs .games .scripts .config
 cp -ar $HOME/i3-Setup/home/.config/* $HOME/.config
+cp -a $HOME/i3-Setup/home/{.bashrc,.profile,.vimrc,.Xresources}
 
 echo "1.1: installing i3 blocks" | tee -a $ERFile
 cd $HOME/.programs
