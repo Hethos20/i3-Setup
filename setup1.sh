@@ -74,3 +74,6 @@ elif grep -q "green" $TFile; then
 else
 	echo "color not assigned"
 fi
+
+echo "2.1: give execute permission to scripts"
+sudo chmod +x $HOME/.scripts/*
