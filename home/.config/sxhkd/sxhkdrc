@@ -1,0 +1,37 @@
+#dmenu
+alt + F2
+	dmenu_run
+
+#ranger
+alt + F1
+	urxvt -e ranger
+
+#terminal
+alt + t
+	urxvt	
+
+#i3lock
+ctrl + shift + e
+	i3lock-fancy
+
+#kill window
+alt + F4
+	i3-msg kill window
+
+#go to next workspace
+ctrl + alt + Right
+	i3-msg workspace next
+
+#go to previous workspace
+ctrl + alt + Left
+	i3-msg workspace prev
+
+#Mute audio
+XF86AudioMute
+	amixer -q -D pulse sset Master toggle && pkill -RTMIN+10 i3blocks
+
+XF86AudioRaiseVolume 
+	amixer -q -D pulse sset Master 5%+ && pkill -RTMIN+10 i3blocks
+
+XF86AudioLowerVolume 
+	amixer -q -D pulse sset Master 5%- && pkill -RTMIN+10 i3blocks

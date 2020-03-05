@@ -1,0 +1,10 @@
+dir=$(pwd)
+echo $dir
+cd $dir
+
+target=$1
+#echo $target
+
+pandoc -s -o $target.pdf $target.md
+
+zathura $target.pdf

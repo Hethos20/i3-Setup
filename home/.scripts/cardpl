@@ -1,0 +1,10 @@
+cd /home/red/Programs/firefox
+
+#echo "Enter card name"
+#read card
+card=$1
+
+./firefox -P 'instance' https://www.dollys.ca/products/search?q=$card https://www.facetofacegames.com/products/search?q=$card http://www.ygomarket.com/products/search?q=$card;
+
+clear;
+exit 1

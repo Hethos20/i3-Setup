@@ -1,0 +1,19 @@
+file=$HOME/.scripts/.xrandr_results
+wallpaper=$HOME/Pictures/Wallpapers
+
+cat /dev/null > $file
+
+xrandr > $file
+
+if grep -q "DP-1 connected" $file && grep -q "VGA-1 disconnected" $file; then
+	feh --bg-center $wallpaper/red_space_wallpaper_2560x1440.jpg
+	echo "Resolution set to 2560x1440"
+
+elif grep -q "VGA-1 disconnected" $file && grep -q "DP-1 disconnected" $file; then
+	feh --bg-center $wallpaper/red_space_wallpaper_1366x768.jpg
+	echo "Resolution set to 1366x768"
+else
+	echo "interface not found"
+fi
+
+
