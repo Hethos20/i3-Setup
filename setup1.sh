@@ -6,7 +6,8 @@ TFile=$HOME/i3-Setup/.temp.txt
 ERFile=$HOME/i3-Setup/Error2.txt
 
 cd $HOME
-mkdir Documents Downloads Desktop Music Pictures Public Videos .programs .games .scripts .config
+mkdir Documents Downloads Desktop Music Pictures Public Videos .programs .games .scripts .config .vim
+mkdir .vim/plugged
 cp -ar $HOME/i3-Setup/home/.config/* $HOME/.config
 cp -ar $HOME/i3-Setup/home/.scripts/* $HOME/.scripts
 cp -a $HOME/i3-Setup/home/{.bashrc,.profile,.vimrc,.Xresources} $HOME
@@ -17,8 +18,8 @@ git clone https://github.com/Airblader/i3blocks-gaps i3blocks >> $ERFile 2>&1
 cd i3blocks
 sudo make clean debug >> $ERFile 2>&1
 sudo make install >> $ERFile 2>&1
-rm $HOME/.programs/i3blocks/scripts/volume
-cp -r $HOME/i3-Setup/volume $HOME/.programs/i3blocks/scripts
+#rm $HOME/.programs/i3blocks/scripts/volume
+#cp -r $HOME/i3-Setup/volume $HOME/.programs/i3blocks/scripts
 
 cd $HOME/.programs
 
