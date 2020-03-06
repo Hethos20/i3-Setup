@@ -7,4 +7,5 @@ After script finished, enter these commands:
 
 dpkg-reconfigure lightdm
 
-Install the vim plugins with :PlugInstall [name... ]
+Install the vim plugins with 
+:PlugInstall
