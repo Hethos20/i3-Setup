@@ -1,10 +1,7 @@
 set number
 set laststatus=2
-colorscheme torte
 
-call plug#begin()
-
-	Plug 'itchyny/lightline.vim'	
+call plug#begin('$HOME/.vim/pluggeu')
+	Plug 'itchyny/lightline.vim'
 	Plug 'gabrielelana/vim-markdown'
-
 call plug#end()
