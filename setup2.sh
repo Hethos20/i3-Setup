@@ -125,3 +125,5 @@ sudo apt-key add winehq.key
 sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ eoan main' $version main -yy >> $ERFile 2>&1
 sudo apt-get update -yy >> $ERFile 2>&1
 sudo apt install --install-recommends winehq-stable -yy >> $ERFile 2>&1
+
+reboot
