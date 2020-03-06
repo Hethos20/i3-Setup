@@ -114,7 +114,7 @@ sudo apt-get install krita -yy >> $ERFile 2>&1
 echo "1.26: installing calibre" | tee -a $ERFile
 sudo apt-get install calibre -yy >> $ERFile 2>&1
 
-echo "1:27: installing curl" | tee -a $ERFile
+echo "1.27: installing curl" | tee -a $ERFile
 sudo apt-get install curl -yy >> $ERFile 2>&1
 
 echo "1.28: installing wine" | tee -a $ERFile
@@ -125,5 +125,11 @@ sudo apt-key add winehq.key
 sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ eoan main' $version main -yy >> $ERFile 2>&1
 sudo apt-get update -yy >> $ERFile 2>&1
 sudo apt install --install-recommends winehq-stable -yy >> $ERFile 2>&1
+
+echo "1.29 installing xautolock"
+sudo apt-get install xautolock -yy >> $ERFile 2>&1
+
+echo "1.3 installing ranger
+sudo apt-get install ranger -yy >> $ERFile 2>&1
 
 reboot
