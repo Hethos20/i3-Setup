@@ -79,19 +79,17 @@ sudo add-apt-repository ppa:libretro/stable -yy >> $ERFile 2>&1
 sudo apt-get update -yy >> $ERFile 2>&1
 sudo apt-get install retroarch* -yy >> $ERFile 2>&1
 
-#cd $HOME/.programs
+cd $HOME/.programs
 
-#Install Discord
-#echo "1.18: installing Discord" | tee -a $ERFile
-#wget "https://discordapp.com/api/download?platform=linux&format=deb" -O discord.deb >> $ERFile 2>&1
-#sudo gdebi discord.deb >> $ERFile 2>&1
-#rm discord.deb
+echo "1.18: installing Discord" | tee -a $ERFile
+wget "https://discordapp.com/api/download?platform=linux&format=deb" -O discord.deb >> $ERFile 2>&1
+sudo gdebi discord.deb --n >> $ERFile 2>&1
+rm discord.deb
 
-#Install Multimc
-#echo "1.19: installing Multimc" | tee -a $ERFile
-#wget "https://files.multimc.org/downloads/multimc_1.4-1.deb" -O multimc.deb >> $ERFile 2>&1
-#sudo gdebi multimc.deb >> $ERFile 2>&1
-#rm multimc.deb
+echo "1.19: installing Multimc" | tee -a $ERFile
+wget "https://files.multimc.org/downloads/multimc_1.4-1.deb" -O multimc.deb >> $ERFile 2>&1
+sudo gdebi multimc.deb --n >> $ERFile 2>&1
+rm multimc.deb
 
 #cd $HOME
 
