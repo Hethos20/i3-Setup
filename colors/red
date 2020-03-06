@@ -1,0 +1,6 @@
+# class                 border  backgr. text    indicator child_border
+client.focused          #B40404 #B40404 #ffffff #8A0808   #B40404
+client.focused_inactive #B10000 #B10000 #ffffff #484e50   #B40404
+client.unfocused        #800000 #800000 #BDBDBD #292d2e   #800000
+client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c

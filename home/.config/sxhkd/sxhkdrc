@@ -1,18 +1,19 @@
 #dmenu
 alt + F2
-	dmenu_run
+#	dmenu_run
+	dmenu_run -nf '#BBBBBB' -nb '#222222' -sb '#09A5CE' -sf '#EEEEEE' -fn 'monospace-10' -p 'dmenu prompt'
 
 #ranger
 alt + F1
 	urxvt -e ranger
 
+#lock screen
+ctrl + alt + p
+	lock
+
 #terminal
 alt + t
 	urxvt	
-
-#i3lock
-ctrl + shift + e
-	i3lock-fancy
 
 #kill window
 alt + F4
@@ -35,3 +36,4 @@ XF86AudioRaiseVolume
 
 XF86AudioLowerVolume 
 	amixer -q -D pulse sset Master 5%- && pkill -RTMIN+10 i3blocks
+

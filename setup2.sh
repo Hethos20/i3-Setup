@@ -91,7 +91,7 @@ wget "https://files.multimc.org/downloads/multimc_1.4-1.deb" -O multimc.deb >> $
 sudo gdebi multimc.deb --n >> $ERFile 2>&1
 rm multimc.deb
 
-#cd $HOME
+cd $HOME
 
 echo "1.20: installing arandr" | tee -a $ERFile
 sudo apt-get install arandr -yy >> $ERFile 2>&1
@@ -129,7 +129,12 @@ sudo apt install --install-recommends winehq-stable -yy >> $ERFile 2>&1
 echo "1.29 installing xautolock"
 sudo apt-get install xautolock -yy >> $ERFile 2>&1
 
-echo "1.3 installing ranger
+echo "1.30 installing ranger"
 sudo apt-get install ranger -yy >> $ERFile 2>&1
+
+echo "1.31 configuring vim"
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim >> $ERFile 2>&1
+
 
 reboot

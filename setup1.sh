@@ -6,7 +6,7 @@ TFile=$HOME/i3-Setup/.temp.txt
 ERFile=$HOME/i3-Setup/Error2.txt
 
 cd $HOME
-mkdir Documents Downloads Desktop Music Pictures Public Videos .programs .games .scripts .config .vim
+mkdir Documents Downloads Desktop Music Pictures Public Videos .programs .games .scripts .config .vim Projects
 mkdir .vim/plugged
 cp -ar $HOME/i3-Setup/home/.config/* $HOME/.config
 cp -ar $HOME/i3-Setup/home/.scripts/* $HOME/.scripts
@@ -45,11 +45,6 @@ sudo chmod +x artix.AppImage
 
 cd $HOME
 
-#echo "2.6: configuring vim plugins" | tee -a $ERFile
-#curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-#    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim >> $ERFile 2>&1
-#cp -r i3-Setup/.vimrc $HOME
-
 echo "2.0: configuring wallpaper"
 mkdir $HOME/Pictures/Wallpapers
 cd $HOME/i3-Setup
@@ -58,10 +53,12 @@ cat /etc/passwd >> $TFile
 
 if grep -q "red" $TFile; then
 	cp Wallpapers/red_space_wallpaper_1920x1080.jpg $HOME/Pictures/Wallpapers
+	cat $HOME/i3-Setup/colors/red > $HOME/.config/i3/config
 	echo "exec_always --no-startup-id feh --bg-center $HOME/Pictures/Wallpapers/red_space_wallpaper_1920x1080.jpg" >> $HOME/.config/i3/config
 
 elif grep -q "blue" $TFile; then
 	cp Wallpapers/blue_galaxy_2560x1440p.jpg $HOME/Pictures/Wallpapers
+	cat $HOME/i3-Setup/colors/blue > $HOME/.config/i3/config
 	echo "exec_always --no-startup-id feh --bg-center $HOME/Pictures/Wallpapers/blue_galaxy_2560x1440p.jpg" >> $HOME/.config/i3/config
 
 elif grep -q "black" $TFile; then
@@ -70,6 +67,7 @@ elif grep -q "black" $TFile; then
 
 elif grep -q "green" $TFile; then
 	cp Wallpapers/green_1080p.jpg $HOME/Pictures/Wallpapers
+	cat $HOME/i3-Setup/colors/blue > $HOME/.config/i3/config
 	echo "exec_always --no-startup-id feh --bg-center $HOME/Pictures/Wallpapers/green_1080p.jpg" >> $HOME/.config/i3/config
 
 else
