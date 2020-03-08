@@ -1,2 +1,2 @@
-cd "$HOME/Games/stronghold-crusader-hd/drive_c/GOG Games/Stronghold Crusader Extreme HD"
+cd "$HOME/.games/stronghold-crusader-hd/drive_c/GOG Games/Stronghold Crusader Extreme HD"
 wine Stronghold\ Crusader.exe
