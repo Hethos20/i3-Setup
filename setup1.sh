@@ -53,12 +53,12 @@ cat /etc/passwd >> $TFile
 
 if grep -q "red" $TFile; then
 	cp Wallpapers/red_space_wallpaper_1920x1080.jpg $HOME/Pictures/Wallpapers
-	cat $HOME/i3-Setup/colors/red > $HOME/.config/i3/config
+	cat $HOME/i3-Setup/colors/red >> $HOME/.config/i3/config
 	echo "exec_always --no-startup-id feh --bg-center $HOME/Pictures/Wallpapers/red_space_wallpaper_1920x1080.jpg" >> $HOME/.config/i3/config
 
 elif grep -q "blue" $TFile; then
 	cp Wallpapers/blue_galaxy_2560x1440p.jpg $HOME/Pictures/Wallpapers
-	cat $HOME/i3-Setup/colors/blue > $HOME/.config/i3/config
+	cat $HOME/i3-Setup/colors/blue >> $HOME/.config/i3/config
 	echo "exec_always --no-startup-id feh --bg-center $HOME/Pictures/Wallpapers/blue_galaxy_2560x1440p.jpg" >> $HOME/.config/i3/config
 
 elif grep -q "black" $TFile; then
@@ -67,7 +67,7 @@ elif grep -q "black" $TFile; then
 
 elif grep -q "green" $TFile; then
 	cp Wallpapers/green_1080p.jpg $HOME/Pictures/Wallpapers
-	cat $HOME/i3-Setup/colors/blue > $HOME/.config/i3/config
+	cat $HOME/i3-Setup/colors/green >> $HOME/.config/i3/config
 	echo "exec_always --no-startup-id feh --bg-center $HOME/Pictures/Wallpapers/green_1080p.jpg" >> $HOME/.config/i3/config
 
 else
