@@ -164,7 +164,6 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 exec_always --no-startup-id compton
-exec_always --no-startup-id xautolock
 exec_always --no-startup-id sxhkd $HOME/.config/sxhkd/sxhkdrc
 exec_always --no-startup-id steam
 exec_always --no-startup-id xautolock -time 15 -locker $HOME/.config/i3lock-multimonitor/lock -detectsleep
