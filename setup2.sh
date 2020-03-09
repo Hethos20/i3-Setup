@@ -145,4 +145,7 @@ sudo make install >> $ERFile 2>&1
 #rm $HOME/.programs/i3blocks/scripts/volume
 #cp -r $HOME/i3-Setup/volume $HOME/.programs/i3blocks/scripts
 
+echo "1.32: installing java 8"
+apt install openjdk-8-jre-headless -yy >> $ERFile 2>&1
+
 reboot
