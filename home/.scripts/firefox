@@ -1,2 +1,2 @@
-cd /home/red/Programs/firefox
+cd $HOME/.programs/firefox
 ./firefox

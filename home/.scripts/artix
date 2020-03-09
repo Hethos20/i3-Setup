@@ -1,2 +1,2 @@
-cd /home/red/Games
+cd $HOME/.games
 ./Artix.AppImage
