@@ -145,10 +145,13 @@ sudo make install >> $ERFile 2>&1
 #rm $HOME/.programs/i3blocks/scripts/volume
 #cp -r $HOME/i3-Setup/volume $HOME/.programs/i3blocks/scripts
 
-echo "1.32: installing java 8"
+echo "1.32: installing java 8" | tee -a $ERFile
 sudo apt install openjdk-8-jre-headless -yy >> $ERFile 2>&1
 
-echo "1.33: installing synaptic"
+echo "1.33: installing synaptic" | tee -a $ERFile
 sudo apt-get install synaptic -yy >> $ERFile 2>&1
+
+echo "1.34: installing syncthing" | tee -a $ERFile
+sudo apt-get install syncthing -yy >> $ERFile 2>&1
 
 reboot
