@@ -34,6 +34,12 @@ echo "1.4: installing Artix launcher" | tee -a $ERFile
 wget "https://launch.artix.com/latest/Artix_Games_Launcher-x86_64.AppImage" -O artix.AppImage >> $ERFile 2>&1
 sudo chmod +x artix.AppImage
 
+cd $HOME/.themes
+echo "1.5: installing themes" | tee -a $ERFile
+wget "https://dllb2.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1NzcxODIzNTQiLCJ1IjpudWxsLCJsdCI6ImRvd25sb2FkIiwicyI6Ijk1MWNjNDIyYTRhOWIzNDE1ZjcyOTQ4MWQyMjRiMDY4YmU2NDg4NTdkYTViMmJkYTgyYjAwZDBjZDE1YmI1ODc5NWM5MzhiN2I5MDQzNDg1NDQwZjJlMGNhYTM1OGZjYzE4ZTYyNGEyYmRhNDk2ZTU2ZWE3OGM1MDFiNTk1ZWI4IiwidCI6MTU4MzgxMTc5MCwic3RmcCI6ImQ5OGVjZTkzMWJkM2E4NmVmM2ZlOGI5ZmIyNDM0NWY4Iiwic3RpcCI6IjE2Mi4yMjIuODMuMTU4In0.0jxUSwUI1epjpcNewrYUqwff9GllKfBcI0w61vl4V-w/05-Flat-Remix-GTK-Blue-Dark_20191224.tar.xz" -O Flat-Remix-Blue-Dark.tar.xz
+tar -xvf Flat-Remix-Blue-Dark.tar.xz
+rm Flat-Remix-Blue-Dark.tar.xz
+
 cd $HOME
 
 echo "2.0: configuring wallpaper"
