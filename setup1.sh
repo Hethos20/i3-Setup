@@ -34,15 +34,9 @@ echo "1.4: installing Artix launcher" | tee -a $ERFile
 wget "https://launch.artix.com/latest/Artix_Games_Launcher-x86_64.AppImage" -O artix.AppImage >> $ERFile 2>&1
 sudo chmod +x artix.AppImage
 
-cd $HOME/.themes
-echo "1.5: installing themes" | tee -a $ERFile
-wget "https://dllb2.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1NzcxODIzNTQiLCJ1IjpudWxsLCJsdCI6ImRvd25sb2FkIiwicyI6Ijk1MWNjNDIyYTRhOWIzNDE1ZjcyOTQ4MWQyMjRiMDY4YmU2NDg4NTdkYTViMmJkYTgyYjAwZDBjZDE1YmI1ODc5NWM5MzhiN2I5MDQzNDg1NDQwZjJlMGNhYTM1OGZjYzE4ZTYyNGEyYmRhNDk2ZTU2ZWE3OGM1MDFiNTk1ZWI4IiwidCI6MTU4MzgxMTc5MCwic3RmcCI6ImQ5OGVjZTkzMWJkM2E4NmVmM2ZlOGI5ZmIyNDM0NWY4Iiwic3RpcCI6IjE2Mi4yMjIuODMuMTU4In0.0jxUSwUI1epjpcNewrYUqwff9GllKfBcI0w61vl4V-w/05-Flat-Remix-GTK-Blue-Dark_20191224.tar.xz" -O Flat-Remix-Blue-Dark.tar.xz
-tar -xvf Flat-Remix-Blue-Dark.tar.xz
-rm Flat-Remix-Blue-Dark.tar.xz
-
 cd $HOME
 
-echo "2.0: configuring wallpaper"
+echo "2.0: configuring personalization"
 mkdir $HOME/Pictures/Wallpapers
 cd $HOME/i3-Setup
 
@@ -54,9 +48,24 @@ if grep -q "red" $TFile; then
 	echo "exec_always --no-startup-id feh --bg-center $HOME/Pictures/Wallpapers/red_space_wallpaper_1920x1080.jpg" >> $HOME/.config/i3/config
 
 elif grep -q "blue" $TFile; then
+	echo "		Installing themes"
+	cd $HOME/.themes
+	wget "https://dllb2.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1NzcxODIzNTQiLCJ1IjpudWxsLCJsdCI6ImRvd25sb2FkIiwicyI6Ijk1MWNjNDIyYTRhOWIzNDE1ZjcyOTQ4MWQyMjRiMDY4YmU2NDg4NTdkYTViMmJkYTgyYjAwZDBjZDE1YmI1ODc5NWM5MzhiN2I5MDQzNDg1NDQwZjJlMGNhYTM1OGZjYzE4ZTYyNGEyYmRhNDk2ZTU2ZWE3OGM1MDFiNTk1ZWI4IiwidCI6MTU4MzgxMTc5MCwic3RmcCI6ImQ5OGVjZTkzMWJkM2E4NmVmM2ZlOGI5ZmIyNDM0NWY4Iiwic3RpcCI6IjE2Mi4yMjIuODMuMTU4In0.0jxUSwUI1epjpcNewrYUqwff9GllKfBcI0w61vl4V-w/05-Flat-Remix-GTK-Blue-Dark_20191224.tar.xz" -O Flat-Remix-Blue-Dark.tar.xz
+	tar -xvf Flat-Remix-Blue-Dark.tar.xz
+	rm Flat-Remix-Blue-Dark.tar.xz
+	
+	echo "		Installing icons"
+	cd $HOME/.icons
+	wget "https://dllb2.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1NzkyNjMwOTYiLCJ1IjpudWxsLCJsdCI6ImRvd25sb2FkIiwicyI6ImUzZDg1ZGQ0NjJjZGI3YTg2YmY3MmZhYjUwZmM4NDVhMGM5ZjE2YTVlOTIxNmViYjkyMzg4ZjMyODc0YTJmNzE3Zjc2MWM1NGIyZDFmYTY4ZDc4YmJiOThlY2Y4YTdkNDEwYTc2MTAwYmUwYjQ0ODhlZGNlNjg0MTU5ZDk0NTllIiwidCI6MTU4MzgxMjM3MCwic3RmcCI6ImQ5OGVjZTkzMWJkM2E4NmVmM2ZlOGI5ZmIyNDM0NWY4Iiwic3RpcCI6IjE2Mi4yMjIuODMuMTU4In0.WkmW5veE2ri8BNOAwXCMHfNeq1zfsf99_90mAfhpjGA/02-Flat-Remix-Blue-Dark_20200117.tar.xz" -O Flat-Remix-Blue-Dark-icons.tar.xz
+	tar -xvf Flat-Remix-Blue-Dark-icons.tar.xz
+	rm Flat-Remix-Blue-Dark-icons.tar.xz
+	
+	echo "		Installing wallpaper"
 	cp Wallpapers/blue_galaxy_2560x1440p.jpg $HOME/Pictures/Wallpapers
 	cat $HOME/i3-Setup/colors/blue >> $HOME/.config/i3/config
 	echo "exec_always --no-startup-id feh --bg-center $HOME/Pictures/Wallpapers/blue_galaxy_2560x1440p.jpg" >> $HOME/.config/i3/config
+
+	echo "After you finished setup2, go to lxappearence to change themes and icons"
 
 elif grep -q "black" $TFile; then
 	cp Wallpapers/black_triangle_1920x1080p.jpg $HOME/Pictures/Wallpapers
