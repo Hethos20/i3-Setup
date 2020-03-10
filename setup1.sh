@@ -6,7 +6,7 @@ TFile=$HOME/i3-Setup/.temp.txt
 ERFile=$HOME/i3-Setup/Error2.txt
 
 cd $HOME
-mkdir Documents Downloads Desktop Music Pictures Public Videos .programs .games .scripts .config .vim Projects
+mkdir Documents Downloads Desktop Music Pictures Public Videos .programs .games .scripts .config .vim Projects .themes .icons
 mkdir .vim/plugged
 cp -ar $HOME/i3-Setup/home/.config/* $HOME/.config
 cp -ar $HOME/i3-Setup/home/.scripts/* $HOME/.scripts
