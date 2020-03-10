@@ -155,7 +155,7 @@ echo "1.34: installing syncthing" | tee -a $ERFile
 sudo apt-get install syncthing -yy >> $ERFile 2>&1
 
 echo "1.35: installing mocp" | tee -a $ERFile
-sudo apt-get install mocp -yy >> $ERFile 2>&1
+sudo apt-get install moc -yy >> $ERFile 2>&1
 touch $HOME/.moc/config
 echo "Theme = transparent-background" > $HOME/.moc/config
 chmod g-w ~/.moc/config
