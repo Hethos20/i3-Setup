@@ -43,6 +43,19 @@ cd $HOME/i3-Setup
 cat /etc/passwd >> $TFile
 
 if grep -q "red" $TFile; then
+	echo "		Installing themes"
+	cd $HOME/.themes
+	wget "https://dllb2.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1NzcxODEzNDMiLCJ1IjpudWxsLCJsdCI6ImRvd25sb2FkIiwicyI6ImFhZGEzZTdiZTY5M2Y3N2E1MmIyYTI2NDdmMTk0YzM4ZDAxNzU1MDg5NzE1M2UxNGIyNzFjZThjMWU3ZTQyNjA0MjYwMzExYjUyODkxNGU0NDhmMWI4ZjM1NDUxNDEzNzdkMWNhYmY4ODNiMWIxMTI1ODQ0MTdiODI0Yjg1NzQzIiwidCI6MTU4Mzg1NDgwNCwic3RmcCI6IjgzNDBlZDNmNzg5ZGFkYWZkNzJmOGVkZmNmYmQxZTkwIiwic3RpcCI6IjE0Mi4yMDQuNy40MSJ9.UtkLSYHsaKDAgVpRcBfykTg3XbSwXDnCrrPFyGONwZk/06-Flat-Remix-GTK-Red-Dark-Solid_20191224.tar.xz" -O Flat-Remix-Red-Dark.tar.xz
+	tar -xvf Flat-Remix-Red-Dark.tar.xz
+	rm Flat-Remix-Red-Dark.tar.xz
+
+	echo "		Installing icons"
+	cd $HOME/.icons
+	wget "https://dllb2.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1NzkyNjIzOTAiLCJ1IjpudWxsLCJsdCI6ImRvd25sb2FkIiwicyI6Ijk1NzE0YzcyYmE3MTIyOWFiMTNiN2JkNWFkOTMzODExMzIzNzAxZGUwN2E3ZDZjZTliNTRmZGU3MDkyZTQxOWIyMGVmMWI5NmM4M2U3YzJhNGQyMTlkY2Q5MmRjNWZmYjlhY2RmNzRmN2ZjNjg5ZWM0OWVkODdkNWNjMTAyMzQyIiwidCI6MTU4Mzg1NTYzNiwic3RmcCI6IjgzNDBlZDNmNzg5ZGFkYWZkNzJmOGVkZmNmYmQxZTkwIiwic3RpcCI6IjE0Mi4yMDQuNy40MSJ9.0m60IdqzXSi5Vaecb8VajMhv3BoA5J2cQUBezJWCDOY/08-Flat-Remix-Red-Dark_20200117.tar.xz" -O Flat-Remix-Red-Dark-icons.tar.xz
+	tar -xvf Flat-Remix-Red-Dark-icons.tar.xz
+	rm Flat-Remix-Red-Dark-icons.tar.xz
+
+	echo "		Setting up wallpaper"
 	cp Wallpapers/red_space_wallpaper_1920x1080.jpg $HOME/Pictures/Wallpapers
 	cat $HOME/i3-Setup/colors/red >> $HOME/.config/i3/config
 	echo "exec_always --no-startup-id feh --bg-center $HOME/Pictures/Wallpapers/red_space_wallpaper_1920x1080.jpg" >> $HOME/.config/i3/config
