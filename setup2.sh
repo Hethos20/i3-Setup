@@ -146,6 +146,9 @@ sudo make install >> $ERFile 2>&1
 #cp -r $HOME/i3-Setup/volume $HOME/.programs/i3blocks/scripts
 
 echo "1.32: installing java 8"
-apt install openjdk-8-jre-headless -yy >> $ERFile 2>&1
+sudo apt install openjdk-8-jre-headless -yy >> $ERFile 2>&1
+
+echo "1.33: installing synaptic"
+sudo apt-get install synaptic -yy >> $ERFile 2>&1
 
 reboot
