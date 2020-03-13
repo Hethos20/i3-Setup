@@ -75,8 +75,12 @@ elif grep -q "blue" $TFile; then
 	
 	echo "		Installing wallpaper"
 	cp Wallpapers/blue_galaxy_2560x1440p.jpg $HOME/Pictures/Wallpapers
-	cat $HOME/i3-Setup/colors/blue >> $HOME/.config/i3/config
+	cat $HOME/i3-Setup/colors/blue/blue >> $HOME/.config/i3/config
 	echo "exec_always --no-startup-id feh --bg-center $HOME/Pictures/Wallpapers/blue_galaxy_2560x1440p.jpg" >> $HOME/.config/i3/config
+
+	echo "		Installing dual monitor i3lock"
+	cp -r $HOME/i3-Setup/colors/blue/i3lock-multimonitor $HOME/.config
+	ln -s $HOME/.config/i3lock-multimonitor/lock $HOME
 
 	echo "After you finished setup2, go to lxappearence to change themes and icons"
 
