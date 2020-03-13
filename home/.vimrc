@@ -1,3 +1,4 @@
+set wrap!
 set number
 set laststatus=2
 
