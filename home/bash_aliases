@@ -1,0 +1,4 @@
+alias firefox="$HOME/.programs/firefox/firefox"
+alias multimc="/opt/multimc/run.sh"
+alias bitwarden="$HOME/.programs/bitwarden.AppImage"
+alias artix="$HOME/.games/Artix.AppImage"

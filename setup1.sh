@@ -44,6 +44,7 @@ part=0
 stage=$((stage + 1))
 
 cd $HOME
+source $HOME/.bashrc
 
 echo "$stage.$part: configuring personalization"
 mkdir $HOME/Pictures/Wallpapers
