@@ -117,5 +117,5 @@ if ! shopt -oq posix; then
 fi
 
 export PATH="$HOME/bin:$PATH"
-export PATH="$PATH:/home/red/.scripts"
-export PATH="$PATH:/home/red/opt/bin/"
+export PATH="$PATH:$HOME/.scripts"
+export PATH="$PATH:$HOME/opt/bin/"
