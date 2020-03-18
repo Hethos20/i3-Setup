@@ -204,8 +204,4 @@ echo "Theme = transparent-background" > $HOME/.moc/config
 chmod g-w ~/.moc/config
 part=$((part + 1))
 
-echo "$stage.$part: installing dmenu dependencies" | tee -a $ERFile
-sudo apt-get install libxinerama1 libx11-dev libxinerama-dev libxft-dev -yy >> $ERFile 2>&1
-part=$((part + 1))
-
 reboot
